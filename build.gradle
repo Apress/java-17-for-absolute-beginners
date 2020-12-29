@@ -1,0 +1,40 @@
+plugins {
+    id 'org.javamodularity.moduleplugin' version '1.7.0' apply false
+}
+
+java.sourceCompatibility = JavaVersion.VERSION_17
+java.targetCompatibility = JavaVersion.VERSION_17
+
+ext {
+    log4jVersion = '2.14.0'
+
+    misc = [
+            log4j   : "org.apache.logging.log4j:log4j-core:$log4jVersion"
+    ]
+}
+
+allprojects {
+    group 'com.apress.bgn'
+    version "1.0-SNAPSHOT"
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: "org.javamodularity.moduleplugin"
+
+    repositories {
+        mavenCentral()
+    }
+
+    test {
+        useJUnitPlatform()
+
+        testLogging {
+            events 'PASSED', 'FAILED', 'SKIPPED'
+        }
+    }
+
+    dependencies {
+        misc.log4j
+    }
+}
