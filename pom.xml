@@ -15,6 +15,7 @@
     <modules>
         <module>chapter00</module>
         <module>chapter01</module>
+<<<<<<< HEAD
 
         <module>chapter02</module>
         <module>chapter03</module>
@@ -39,7 +40,27 @@
         <log4j.version>2.14.0</log4j.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <jackson.version>2.12.4</jackson.version>
+=======
+        <module>chapter02</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <log4j.version>2.14.0</log4j.version>
+>>>>>>> started writing code and added support for modules
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <defaultGoal>clean install site site:stage</defaultGoal>
@@ -90,6 +111,7 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+<<<<<<< HEAD
                 <artifactId>maven-site-plugin</artifactId>
                 <configuration>
                     <generateReports>true</generateReports>
@@ -133,6 +155,14 @@
                         </goals>
                     </execution>
                 </executions>
+=======
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
+                </configuration>
+>>>>>>> started writing code and added support for modules
             </plugin>
         </plugins>
     </build>
