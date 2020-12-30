@@ -1,7 +1,7 @@
 plugins {
     id 'org.javamodularity.moduleplugin' version '1.7.0' apply false
 }
-
+// https://github.com/java9-modularity/gradle-modules-plugin
 java.sourceCompatibility = JavaVersion.VERSION_17
 java.targetCompatibility = JavaVersion.VERSION_17
 

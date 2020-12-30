@@ -42,6 +42,7 @@
         <jackson.version>2.12.4</jackson.version>
 =======
         <module>chapter02</module>
+        <module>chapter03</module>
     </modules>
 
     <properties>
