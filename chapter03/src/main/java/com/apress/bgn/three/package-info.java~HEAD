@@ -25,10 +25,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.bgn.three;
-
 /**
- * Created by iuliana.cosmina on 30/12/2020
+ * Contains classes used for reading information from various sources.
+ * @since 1.0-SNAPSHOT
+ * @author iuliana.cosmina
+ * @version 1.0-SNAPSHOT
  */
-public class SimpleReader {
-}
+//@Deprecated
+package com.apress.bgn.three;

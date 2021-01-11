@@ -19,7 +19,7 @@
   //  opens com.apress.bgn.ch0 to chapter.three;
 
     //allows access to public public members in package com.apress.bgn.ch0 to modules: chapter.one, chapter.three, chapter.four
-    exports com.apress.bgn.zero to chapter.one; //, chapter.three, chapter.four;
+    exports com.apress.bgn.zero to chapter.one, chapter.three; // chapter.four;
 
     //allows access to public public members in package com.apress.bgn.ch0.service
 >>>>>>> started writing code and added support for modules

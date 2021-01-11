@@ -31,5 +31,5 @@ SOFTWARE.
  * @author iuliana.cosmina
  * @version 1.0-SNAPSHOT
  */
-//@Deprecated
+@Deprecated
 package com.apress.bgn.three;
