@@ -51,7 +51,8 @@
     </dependencyManagement>
 
     <build>
-        <defaultGoal>clean install site site:stage</defaultGoal>
+        <!-- <defaultGoal>clean install site site:stage</defaultGoal> -->
+        <defaultGoal>clean install</defaultGoal>
         <pluginManagement>
             <plugins>
                 <plugin>
