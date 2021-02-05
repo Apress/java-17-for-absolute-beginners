@@ -7,12 +7,19 @@
     <parent>
         <artifactId>chapter05</artifactId>
         <groupId>com.apress.bgn</groupId>
+<<<<<<< HEAD
         <version>2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>calendar-date</artifactId>
     <name>Chapter 05: Calendar Date</name>
     <description>Contains Calendar Date types examples for Chapter 5.</description>
+=======
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>calandar-date</artifactId>
+>>>>>>> 007 added full structure of this project
     <packaging>jar</packaging>
 
     <build>
@@ -26,12 +33,35 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
+<<<<<<< HEAD
                                 com.apress.bgn.five.DateDemo
+=======
+                                com.apress.bgn.five.calendardate.Main
+>>>>>>> 007 added full structure of this project
                             </mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
+=======
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+>>>>>>> 007 added full structure of this project
         </plugins>
     </build>
 

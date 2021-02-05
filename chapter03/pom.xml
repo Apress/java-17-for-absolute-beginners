@@ -26,7 +26,7 @@
         <dependency>
             <groupId>com.apress.bgn</groupId>
             <artifactId>chapter01</artifactId>
-            <version>${project.version}</version>
+            <version>${project.parent.version}</version>
             <scope>runtime</scope>
         </dependency>
     </dependencies>

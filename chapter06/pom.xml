@@ -7,21 +7,34 @@
     <parent>
         <artifactId>java-17-for-absolute-beginners</artifactId>
         <groupId>com.apress.bgn</groupId>
+<<<<<<< HEAD
         <version>2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>chapter06</artifactId>
     <name>Chapter 06</name>
     <description>Contains sources for Chapter 6.</description>
+=======
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>chapter06</artifactId>
+>>>>>>> 007 added full structure of this project
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>com.apress.bgn</groupId>
+<<<<<<< HEAD
             <artifactId>chapter04</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 
+=======
+            <artifactId>chapter00</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+>>>>>>> 007 added full structure of this project
     </dependencies>
 
     <build>
@@ -35,12 +48,35 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
+<<<<<<< HEAD
                                 com.apress.bgn.six.OperatorDemo
+=======
+                                com.apress.bgn.six.Main
+>>>>>>> 007 added full structure of this project
                             </mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
+=======
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+>>>>>>> 007 added full structure of this project
         </plugins>
     </build>
 

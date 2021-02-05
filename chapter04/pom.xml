@@ -22,7 +22,7 @@
             <version>${project.parent.version}</version>
         </dependency>
 
-        <!-- Necesary for the toString in Performer -->
+        <!-- Necessary for the toString in Performer -->
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
