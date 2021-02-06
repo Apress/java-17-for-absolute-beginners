@@ -19,7 +19,11 @@
     </parent>
 
     <artifactId>chapter05</artifactId>
+<<<<<<< HEAD
 >>>>>>> 007 added full structure of this project
+=======
+    <name>Chapter 05</name>
+>>>>>>> 008 finished chapter 3
     <packaging>pom</packaging>
 
     <modules>

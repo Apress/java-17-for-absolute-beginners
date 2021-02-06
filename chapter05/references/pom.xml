@@ -19,7 +19,11 @@
     </parent>
 
     <artifactId>references</artifactId>
+<<<<<<< HEAD
 >>>>>>> 007 added full structure of this project
+=======
+    <name>Chapter 05: References</name>
+>>>>>>> 008 finished chapter 3
     <packaging>jar</packaging>
 
     <build>

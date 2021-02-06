@@ -39,7 +39,7 @@
                             </mainClass>
                         </manifest>
                     </archive>
-                </configuration>
+                 </configuration>
             </plugin>
         </plugins>
     </build>

@@ -19,7 +19,11 @@
     </parent>
 
     <artifactId>collections</artifactId>
+<<<<<<< HEAD
 >>>>>>> 007 added full structure of this project
+=======
+    <name>Chapter 05: Collections</name>
+>>>>>>> 008 finished chapter 3
     <packaging>jar</packaging>
 
     <build>

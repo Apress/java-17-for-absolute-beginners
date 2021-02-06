@@ -19,7 +19,11 @@
     </parent>
 
     <artifactId>concurrency</artifactId>
+<<<<<<< HEAD
 >>>>>>> 007 added full structure of this project
+=======
+    <name>Chapter 05: Concurrency</name>
+>>>>>>> 008 finished chapter 3
     <packaging>jar</packaging>
 
     <build>

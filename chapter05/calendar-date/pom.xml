@@ -18,8 +18,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+<<<<<<< HEAD
     <artifactId>calandar-date</artifactId>
 >>>>>>> 007 added full structure of this project
+=======
+    <artifactId>calendar-date</artifactId>
+    <name>Chapter 05: Calendar Date</name>
+>>>>>>> 008 finished chapter 3
     <packaging>jar</packaging>
 
     <build>
