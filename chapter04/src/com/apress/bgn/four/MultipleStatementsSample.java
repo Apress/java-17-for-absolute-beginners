@@ -25,26 +25,25 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.bgn.four.math;
+package com.apress.bgn.four;
 
-import java.lang.Math;
+import java.util.List;
 
 /**
- * Created by iuliana.cosmina on 12/02/2021
+ * Created by iuliana.cosmina on 15/02/2021
  */
-public class Sample {
+public class MultipleStatementsSample {
     public static void main(String... args) {
-        System.out.println("PI value =" + Math.PI);
-        System.out.println("My PI value= " + com.apress.bgn.four.math.Math.PI);
+        List<String> items1 = List.of("1", "a", "2", "a", "3", "a");
 
-        int mynumber = 0;
-        int myNumber = 1;
-        //int mynumber = 7;
-        int Mynumber = 2;
-        int MYNUMBER = 3;
-        System.out.println(mynumber);
-        System.out.println(myNumber);
-        System.out.println(Mynumber);
-        System.out.println(MYNUMBER);
+        List<String> item2 =
+                List.of("1", "a", "2", "a", "3", "a");
+
+        List<String> items3 =
+                List.of("1", "a", "2",
+                        "a", "3", "a");
+
+        /*List<String> badlist = ;
+                List.of("1", "a", "2", "a", "3", "a");*/
     }
 }

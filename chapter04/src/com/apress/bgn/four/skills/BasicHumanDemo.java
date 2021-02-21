@@ -25,26 +25,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.bgn.four.math;
-
-import java.lang.Math;
+package com.apress.bgn.four.skills;
 
 /**
- * Created by iuliana.cosmina on 12/02/2021
+ * Created by iuliana.cosmina on 16/02/2021
  */
-public class Sample {
+public class BasicHumanDemo {
     public static void main(String... args) {
-        System.out.println("PI value =" + Math.PI);
-        System.out.println("My PI value= " + com.apress.bgn.four.math.Math.PI);
-
-        int mynumber = 0;
-        int myNumber = 1;
-        //int mynumber = 7;
-        int Mynumber = 2;
-        int MYNUMBER = 3;
-        System.out.println(mynumber);
-        System.out.println(myNumber);
-        System.out.println(Mynumber);
-        System.out.println(MYNUMBER);
+        Human alex = new Human("Alex", 40, 1.91f);
+        alex.setName("Alex");
+        alex.setAge(40);
+        alex.setHeight(1.91f);
+        int timeToLive = alex.getTimeToLive();
+        System.out.println("Time to live: " + timeToLive);
     }
 }

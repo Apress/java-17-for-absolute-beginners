@@ -25,26 +25,52 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.bgn.four.math;
-
-import java.lang.Math;
+package com.apress.bgn.four.skills;
 
 /**
- * Created by iuliana.cosmina on 12/02/2021
+ * Created by iuliana.cosmina on 21/02/2021
  */
-public class Sample {
-    public static void main(String... args) {
-        System.out.println("PI value =" + Math.PI);
-        System.out.println("My PI value= " + com.apress.bgn.four.math.Math.PI);
+public abstract class Human {
+    public static final int LIFESPAN = 100;
+    private String name;
+    private int age;
+    private float height;
 
-        int mynumber = 0;
-        int myNumber = 1;
-        //int mynumber = 7;
-        int Mynumber = 2;
-        int MYNUMBER = 3;
-        System.out.println(mynumber);
-        System.out.println(myNumber);
-        System.out.println(Mynumber);
-        System.out.println(MYNUMBER);
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public Human(String name, int age, float height) {
+        this(name, age);
+        this.height = height;
+    }
+
+    /**
+     * @return time to live
+     */
+    public abstract int getTimeToLive();
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
     }
 }
