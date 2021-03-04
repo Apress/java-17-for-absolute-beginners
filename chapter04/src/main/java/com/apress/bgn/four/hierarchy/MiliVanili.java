@@ -49,10 +49,7 @@ public class MiliVanili implements Musician { // Musician extends Artist
 
     @Override
     public void setSchool(String school) {
-
     }
-
-
 
     @Override
     public List<String> getSongs() {

@@ -7,29 +7,17 @@
     <parent>
         <artifactId>java-17-for-absolute-beginners</artifactId>
         <groupId>com.apress.bgn</groupId>
-<<<<<<< HEAD
         <version>2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>chapter07</artifactId>
     <name>Chapter 07</name>
     <description>Contains sources for Chapter 7.</description>
-=======
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
-    <artifactId>chapter07</artifactId>
-<<<<<<< HEAD
->>>>>>> 007 added full structure of this project
-=======
-    <name>Chapter 07</name>
->>>>>>> 008 finished chapter 3
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>com.apress.bgn</groupId>
-<<<<<<< HEAD
             <artifactId>chapter04</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
@@ -38,10 +26,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.24</version>
-=======
-            <artifactId>chapter00</artifactId>
-            <version>${parent.version}</version>
->>>>>>> 007 added full structure of this project
         </dependency>
     </dependencies>
 
@@ -68,20 +52,8 @@
                 <configuration>
                     <source>17</source>
                     <target>17</target>
-<<<<<<< HEAD
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
-=======
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
->>>>>>> 007 added full structure of this project
             </plugin>
         </plugins>
     </build>

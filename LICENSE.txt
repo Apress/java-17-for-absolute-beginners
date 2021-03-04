@@ -1,5 +1,6 @@
 Freeware License, some rights reserved
 
+
 Copyright (c) 2022 Iuliana Cosmina
 
 Permission is hereby granted, free of charge, to anyone obtaining a copy
