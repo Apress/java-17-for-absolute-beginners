@@ -7,23 +7,12 @@
     <parent>
         <artifactId>java-17-for-absolute-beginners</artifactId>
         <groupId>com.apress.bgn</groupId>
-<<<<<<< HEAD
         <version>2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>chapter05</artifactId>
     <name>Chapter 05</name>
     <description>Contains sources for Chapter 5.</description>
-=======
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
-    <artifactId>chapter05</artifactId>
-<<<<<<< HEAD
->>>>>>> 007 added full structure of this project
-=======
-    <name>Chapter 05</name>
->>>>>>> 008 finished chapter 3
     <packaging>pom</packaging>
 
     <modules>
@@ -38,24 +27,8 @@
     <dependencies>
         <dependency>
             <groupId>com.apress.bgn</groupId>
-<<<<<<< HEAD
             <artifactId>chapter04</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <site>
-            <id>${project.artifactId}-site</id>
-            <url>${project.baseUri}</url>
-        </site>
-    </distributionManagement>
-
-=======
-            <artifactId>chapter00</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-    </dependencies>
-
->>>>>>> 007 added full structure of this project
 </project>

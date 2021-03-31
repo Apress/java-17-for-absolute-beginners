@@ -39,7 +39,11 @@ import java.util.Map;
 public class GenericsDemo {
 
     public static void main(String... args) {
+<<<<<<< HEAD
         Performer  john = new Performer("John", 43, 1.91f, Gender.MALE);
+=======
+        Performer  john = new Performer("John", 40, 1.91f, Gender.MALE);
+>>>>>>> 014 finished chapter 4
         Performer jane = new Performer("Jane", 34, 1.591f, Gender.FEMALE);
 
         var duet = Pair.of(john, jane);

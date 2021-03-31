@@ -32,13 +32,12 @@ import com.apress.bgn.four.classes.Gender;
 /**
  * Created by iuliana.cosmina on 28/03/2021
  */
+public final class Performer  extends Human {
+    public Performer(String name, int age, Gender gender) {
+        super(name, age, gender);
+    }
 
-//public final class Performer  extends Human {
-//    public Performer(String name, int age, Gender gender) {
-//        super(name, age, gender);
-//    }
-//
-//    public Performer(String name, int age, float height, Gender gender) {
-//        super(name, age, height, gender);
-//    }
-//}
+    public Performer(String name, int age, float height, Gender gender) {
+        super(name, age, height, gender);
+    }
+}

@@ -36,9 +36,14 @@ import java.nio.file.Paths;
 
 /**
  * Created by iuliana.cosmina on 31/03/2021
+<<<<<<< HEAD
  * I will delete this later - used for validating Figure numbers
  */
 public class ListingParser {
+=======
+ */
+public class ChapterParser {
+>>>>>>> 014 finished chapter 4
 
     public static void main(String... args) throws IOException {
         //FileWriter fileWriter = new FileWriter("/Users/iulianacosmina/apress/book-java-bgn-02/ch04-new.adoc");

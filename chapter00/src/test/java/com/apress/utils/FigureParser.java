@@ -24,6 +24,7 @@ AUTHORS OR COPYRIGHT HOLDERS OR APRESS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+<<<<<<< HEAD
 */
 package com.apress.utils;
 
@@ -49,4 +50,9 @@ public class FigureParser {
             }
         });
     }
+=======
+*/package com.apress.utils;/**
+ * Created by iuliana.cosmina on 31/03/2021
+ */public class FigureParser {
+>>>>>>> 014 finished chapter 4
 }

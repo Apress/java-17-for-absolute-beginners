@@ -32,12 +32,8 @@ import com.apress.bgn.four.classes.Gender;
 /**
  * Created by iuliana.cosmina on 28/03/2021
  */
-/*
+
 public sealed class Human implements Mammal permits Performer, Engineer {
-
-public sealed class Human
-    permits Performer {
-
     protected String name;
 
     protected int age;
@@ -89,4 +85,4 @@ public sealed class Human
         this.gender = gender;
     }
 }
-*/
+
