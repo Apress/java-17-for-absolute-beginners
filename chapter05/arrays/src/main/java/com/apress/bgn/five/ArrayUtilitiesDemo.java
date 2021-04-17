@@ -34,6 +34,7 @@ import java.util.Arrays;
  */
 public class ArrayUtilitiesDemo {
     public static void main(String... args) {
+
         // simplified creation, compile can figure out the type and size for the value
         int[] array =  {4, 2};
         // Print array elements

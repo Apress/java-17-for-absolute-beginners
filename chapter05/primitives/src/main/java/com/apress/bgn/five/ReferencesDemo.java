@@ -48,8 +48,11 @@ public class ReferencesDemo {
         multipleObjectAndReferences();
 
         oneObjectMultipleReferences();
+<<<<<<< HEAD
 
         printEscapedCharacters();
+=======
+>>>>>>> 015 started chapter 5
     }
 
     static void swap(IntContainer a, IntContainer b) {
@@ -71,9 +74,12 @@ public class ReferencesDemo {
         Actor actor = new Performer("Jean", 40, 1.91f, Gender.MALE);
         Musician musician = new Performer("Jodie", 40, 1.71f, Gender.FEMALE);
     }
+<<<<<<< HEAD
 
     private static void printEscapedCharacters(){
         String perf = "The singers performing tonight are: \n\t Paolo Nutini \n\t Seth MacFarlane\n\t John Mayer";
         System.out.println(perf);
     }
+=======
+>>>>>>> 015 started chapter 5
 }

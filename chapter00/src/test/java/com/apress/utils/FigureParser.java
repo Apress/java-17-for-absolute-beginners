@@ -25,6 +25,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 015 started chapter 5
 */
 package com.apress.utils;
 
@@ -33,6 +36,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
+<<<<<<< HEAD
  * Created by iuliana.cosmina on 31/03/2021
  * I will delete this later - used for validating Figure numbers
  */
@@ -55,4 +59,23 @@ public class FigureParser {
  * Created by iuliana.cosmina on 31/03/2021
  */public class FigureParser {
 >>>>>>> 014 finished chapter 4
+=======
+ * Created by iuliana.cosmina on 31/03/2021
+ * I will delete this later - used for validating Figure numbers
+ */
+public class FigureParser {
+    public static void main(String... args) throws IOException {
+        Files.readAllLines(Paths.get("/Users/iulianacosmina/apress/book-java-bgn-02/ch04.adoc")).forEach(line -> {
+            if(line.contains("Figure")) {
+                int startIndex = line.indexOf("Figure") + 7;
+                int endIndex = startIndex + 5;
+                try {
+                    System.out.println(line.substring(startIndex, endIndex));
+                } catch (StringIndexOutOfBoundsException se) {
+                    System.out.println(line);
+                }
+            }
+        });
+    }
+>>>>>>> 015 started chapter 5
 }
