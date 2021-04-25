@@ -38,32 +38,28 @@ import java.util.Map;
  */
 public class GenericsDemo {
 
-    public static void main(String... args) {
-<<<<<<< HEAD
-        Performer  john = new Performer("John", 43, 1.91f, Gender.MALE);
-=======
-        Performer  john = new Performer("John", 40, 1.91f, Gender.MALE);
->>>>>>> 014 finished chapter 4
-        Performer jane = new Performer("Jane", 34, 1.591f, Gender.FEMALE);
+        public static void main(String... args) {
+                Performer  john = new Performer("John", 43, 1.91f, Gender.MALE);
+                Performer jane = new Performer("Jane", 34, 1.591f, Gender.FEMALE);
 
-        var duet = Pair.of(john, jane);
-        System.out.println(duet);
+                var duet = Pair.of(john, jane);
+                System.out.println(duet);
 
-        Pair<Performer, Double> netWorth = Pair.of(john, 34_000_000.03);
-        System.out.println(netWorth);
+                Pair<Performer, Double> netWorth = Pair.of(john, 34_000_000.03);
+                System.out.println(netWorth);
 
-        Pair<String, Performer> johnsGenre = Pair.of("country-pop", john);
-        System.out.println(johnsGenre);
+                Pair<String, Performer> johnsGenre = Pair.of("country-pop", john);
+                System.out.println(johnsGenre);
 
-        HashMap<Long, Map<String, ? extends Performer>> performers = new HashMap<Long, Map<String, ? extends Performer>>() ;
-        var performers1 = new HashMap<Long, Map<String, ? extends Performer>>() ;
-        HashMap<Long, Map<String, ? extends Performer>> performers3 = new HashMap<>() ;
+                HashMap<Long, Map<String, ? extends Performer>> performers = new HashMap<Long, Map<String, ? extends Performer>>() ;
+                var performers1 = new HashMap<Long, Map<String, ? extends Performer>>() ;
+                HashMap<Long, Map<String, ? extends Performer>> performers3 = new HashMap<>() ;
 
-        var performers4 = new HashMap<>();
-        //performers.put(null, null);
-        //performers.put(john, jane);
-        //performers.put(1, "bbb");
-        //performers.put("aaa", "bbb");
+                var performers4 = new HashMap<>();
+                //performers.put(null, null);
+                //performers.put(john, jane);
+                //performers.put(1, "bbb");
+                //performers.put("aaa", "bbb");
 
-    }
+        }
 }
