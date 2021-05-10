@@ -27,12 +27,17 @@ SOFTWARE.
 */
 package com.apress.bgn.four.base;
 
-/**
- * Created by iuliana.cosmina on 16/02/2021
- */
 public class Human {
-    static final int LIFESPAN = 100;
+    public static final int LIFESPAN = 100;
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Human() { }
 
@@ -57,13 +62,6 @@ public class Human {
         this.height = height;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     /**
      * compute and prints time to live

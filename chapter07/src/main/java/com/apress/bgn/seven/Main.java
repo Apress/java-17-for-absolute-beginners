@@ -32,10 +32,7 @@ package com.apress.bgn.seven;
  */
 public class Main {
     public static void main(String... args) {
-<<<<<<< HEAD
         String text = "sample";
         System.out.println(text);
-=======
->>>>>>> 007 added full structure of this project
     }
 }
