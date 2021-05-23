@@ -1,9 +1,10 @@
 /**
  * Created by iuliana.cosmina on 3/6/18.
  */
-module chapter.eigth {
+module chapter.eight {
     requires jsefa;
     exports com.apress.bgn.eight;
-    opens com.apress.bgn.eight.util;
-    opens com.apress.bgn.eight;
+    opens com.apress.bgn.eigth.util;
+    opens com.apress.bgn.eigth;
+
 }

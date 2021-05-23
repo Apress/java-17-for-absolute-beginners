@@ -40,7 +40,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                com.apress.bgn.eight.IntroductoryMain
+                                com.apress.bgn.eigth.IntroductoryMain
                             </mainClass>
                         </manifest>
                     </archive>
