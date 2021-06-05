@@ -12,7 +12,11 @@
 
     <artifactId>chapter09</artifactId>
     <name>Chapter 09</name>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>logging-jul</module>
+    </modules>
 
     <dependencies>
         <dependency>
