@@ -25,7 +25,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
 package com.apress.bgn.nine;
+
+import com.apress.bgn.nine.Account;
 
 import com.apress.bgn.nine.db.DbConnection;
 import com.apress.bgn.nine.fake.db.FakeDBConnection;

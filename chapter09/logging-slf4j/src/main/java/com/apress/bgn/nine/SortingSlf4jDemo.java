@@ -35,8 +35,6 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.IntStream;
 
 /**
  * Class <code>SortingSlf4jDemo</code> is an entry point of this application.<p>
@@ -51,8 +49,8 @@ public class SortingSlf4jDemo {
     /**
      * Executes the whole logic of this program.<p>
      * Creates an <code>int[]</code> instance.<p>
-     * Creates an {@link com.apress.bgn.nine.algs.MergeSort} instance.<p>
-     * Uses the {@link com.apress.bgn.nine.algs.MergeSort#sort(int[], int, int)} to sort the array.
+     * Creates an {@link MergeSort} instance.<p>
+     * Uses the {@link MergeSort#sort(int[], int, int)} to sort the array.
      *
      * @param args program arguments
      */

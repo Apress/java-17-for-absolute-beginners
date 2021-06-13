@@ -7,7 +7,7 @@
             <fileNamePattern>chapter09/logging-slf4j/out/output_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>2MB</maxFileSize>
+            <maxFileSize>10MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
