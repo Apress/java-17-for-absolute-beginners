@@ -1,6 +1,6 @@
 /**
  * Created by iuliana.cosmina on 3/6/18.
- * This module is declared with "open" to allow reflection during testing.
+ * This module is decalred with "open" to allow reflection during testing.
  */
 open module chapter.nine.testing {
     requires org.slf4j;

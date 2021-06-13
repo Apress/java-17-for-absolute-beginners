@@ -30,7 +30,9 @@ package com.apress.bgn.nine;
 import com.apress.bgn.nine.algs.IntSorter;
 import com.apress.bgn.nine.algs.QuickSort;
 
+import java.time.Duration;
 import java.util.Arrays;
+import java.util.function.Function;
 
 import static com.apress.bgn.nine.SortingSlf4jDemo.getInts;
 

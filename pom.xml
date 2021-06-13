@@ -6,52 +6,90 @@
 
     <groupId>com.apress.bgn</groupId>
     <artifactId>java-17-for-absolute-beginners</artifactId>
-    <name>Java for absolute beginners, 2nd edition</name>
+    <name>Java for Absolute Beginners, 2nd edition</name>
     <description> This project is designed to gradually introduce you to the Java language syntax and the proper way to design solutions using it. The syntax used contains elements from the beginning to version 17 of Java.</description>
     <version>2.0-SNAPSHOT</version>
     <url>https://www.apress.com/gp/book/9781484270790</url>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>chapter00</module>
-        <module>chapter01</module>
-        <module>chapter02</module>
-        <module>chapter03</module>
-        <module>chapter04</module>
-        <module>chapter05</module>
-        <module>chapter06</module>
-        <module>chapter07</module>
-        <module>chapter08</module>
-        <module>chapter09</module>
-        <module>chapter10</module>
-        <module>chapter11</module>
-        <module>chapter12</module>
-        <module>chapter13</module>
-    </modules>
-
     <properties>
+        <!--  Java version-->
         <maven.compiler.release>17</maven.compiler.release>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <log4j.version>2.14.0</log4j.version>
+
+        <!-- plugin versions -->
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
+        <maven.site.plugin.version>3.9.1</maven.site.plugin.version>
+        <maven.project-info.plugin.version>3.1.2</maven.project-info.plugin.version>
+        <maven.javadoc.plugin.version>3.3.1</maven.javadoc.plugin.version>
+        <maven.jxr.plugin.version>3.1.1</maven.jxr.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+        <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
+        <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
+
+        <!-- dependencies -->
+        <jupiter.junit.version>5.8.1</jupiter.junit.version>
         <jackson.version>2.12.4</jackson.version>
+        <log4j.version>2.14.1</log4j.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>chapter00</module>
+                <module>chapter01</module>
+                <module>chapter02</module>
+                <module>chapter03</module>
+                <module>chapter04</module>
+                <module>chapter05</module>
+                <module>chapter06</module>
+                <module>chapter07</module>
+                <module>chapter08</module>
+                <module>chapter09</module>
+                <module>chapter10</module>
+                <module>chapter11</module>
+                <module>chapter12</module>
+                <module>chapter13</module>
+            </modules>
+        </profile>
+        <profile>
+            <!-- This profile was introduced to only include module that a site can be generated for. -->
+            <id>docs</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>chapter00</module>
+                <module>chapter01</module>
+                <module>chapter02</module>
+                <module>chapter03</module>
+                <module>chapter04</module>
+                <module>chapter05</module>
+                <module>chapter06</module>
+                <module>chapter07</module>
+                <module>chapter08</module>
+                <module>chapter09</module>
+                <!-- maven-javadoc-plugin  has trouble generating Javadoc for projects packaged as a war -->
+                <!--<module>chapter10</module> -->
+                <module>chapter11</module>
+                <module>chapter12</module>
+                <module>chapter13</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <build>
         <!-- <defaultGoal>clean install site site:stage</defaultGoal> -->
+        <!-- <defaultGoal>clean install site site:stage site:run</defaultGoal> -->
         <defaultGoal>clean install</defaultGoal>
         <pluginManagement>
             <plugins>
@@ -63,53 +101,44 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.2.0</version>
+                    <version>${maven.jar.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.8.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M5</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-report-plugin</artifactId>
-                    <version>3.0.0-M5</version>
+                    <version>${maven.site.plugin.version}</version>
+                    <configuration>
+                        <generateReports>true</generateReports>
+                        <generateSitemap>true</generateSitemap>
+                        <inputEncoding>${project.reporting.outputEncoding}</inputEncoding>
+                        <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
+                        <relativizeDecorationLinks>false</relativizeDecorationLinks>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.1.2</version>
+                    <version>${maven.project-info.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.2.0</version>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jxr-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
+
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <configuration>
-                    <generateReports>true</generateReports>
-                    <relativizeDecorationLinks>false</relativizeDecorationLinks>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
+                    <!-- to make sure Maven uses the desired JDK version for everything -->
                     <release>${maven.compiler.release}</release>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
@@ -123,30 +152,47 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- needed to generate the reports during test execution-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
+                <artifactId>maven-site-plugin</artifactId>
                 <configuration>
-                    <showSuccess>false</showSuccess>
-                    <outputDirectory>${project.build.directory}/site</outputDirectory>
-                    <reportsDirectories>
-                        <reportsDirectories>${project.build.directory}/surefire-reports</reportsDirectories>
-                    </reportsDirectories>
+                    <!-- Build documentation with ./mnnw or  mvn (default goal)-->
+                    <!-- Start server with: ./mvnw site:run or mvn site:run -->
+                    <!-- Starts a Jetty server on port 9000 serving the project documentation-->
+                    <port>9000</port>
+                    <tempWebappDirectory>${basedir}/target/staging</tempWebappDirectory>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>during-tests</id>
-                        <phase>test</phase>
+                        <id>copy-resources</id>
+                        <!-- here the phase you need -->
+                        <phase>site</phase>
                         <goals>
-                            <goal>report</goal>
+                            <goal>copy-resources</goal>
                         </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/staging</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/src/site/extra</directory>
+                                    <includes>
+                                        <include>*.html</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
 
     <reporting>
         <plugins>
@@ -165,20 +211,20 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <reportSets>
                     <reportSet>
                         <id>aggregate</id>
                         <reports>
                             <report>aggregate</report>
+                            <report>test-aggregate</report>
                         </reports>
                     </reportSet>
                 </reportSets>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -187,14 +233,20 @@
                     <failOnError>false</failOnError>
                     <doclint>none</doclint>
                     <additionalOptions>-html5</additionalOptions>
+                    <show>public</show>
+                    <quiet>true</quiet>
+                    <doctitle>${project.name}</doctitle>
+                    <inputEncoding>${project.reporting.outputEncoding}</inputEncoding>
+                    <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
                     <sourceFileExcludes>
-                        <sourceFileExclude>**/module-info.java</sourceFileExclude>
+                        <exclude>**/module-info.java</exclude>
                     </sourceFileExcludes>
                     <reportSets>
                         <reportSet>
                             <id>aggregate</id>
                             <reports>
-                                <report>aggregate</report>
+                                <report>aggregate-no-fork</report>
+                                <report>test-aggregate-no-fork</report>
                             </reports>
                         </reportSet>
                         <reportSet>
@@ -206,20 +258,6 @@
                         </reportSet>
                     </reportSets>
                 </configuration>
-                <reportSets>
-                    <reportSet><!-- by default, id = "default" -->
-                        <reports><!-- select non-aggregate reports -->
-                            <report>javadoc</report>
-                            <report>test-javadoc</report>
-                        </reports>
-                    </reportSet>
-                    <reportSet><!-- aggregate reportSet, to define in poms having modules -->
-                        <id>aggregate</id>
-                        <reports>
-                            <report>aggregate</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
             </plugin>
         </plugins>
     </reporting>
@@ -239,8 +277,9 @@
 
     <distributionManagement>
         <site>
-            <id>${project.artifactId}-site</id>
-            <url>${project.baseUri}</url>
+            <id>${project.artifactId}</id>
+            <url>https://www.apress.com/gp/book/9781484270790</url>
         </site>
     </distributionManagement>
+
 </project>

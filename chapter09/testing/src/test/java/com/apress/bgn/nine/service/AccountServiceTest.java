@@ -34,6 +34,9 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * @author Iuliana Cosmina
  * @since 1.0
@@ -114,19 +117,17 @@ public class AccountServiceTest {
     @Test
     public void testCreateAccount() {
         repo.set(1);
-         Account expected = service.createAccount("Gigi", "112233", "2100");
-         assertEquals("Gigi", expected.getHolder());
-         assertEquals("112233", expected.getNumber());
-         assertEquals(2100, expected.getSum());
+        Account expected = service.createAccount("Gigi", "112233", "2100");
+        assertEquals("Gigi", expected.getHolder());
+        assertEquals("112233", expected.getNumber());
+        assertEquals(2100, expected.getSum());
     }
 
     @Test
     public void testCreateAccountAlreadyExists() {
+        repo.set(0);
         AccountCreationException expected = assertThrows(
-                AccountCreationException.class, () -> {
-                    service.createAccount("Gigi", "112233", "2100");
-                }
-        );
+                AccountCreationException.class, () -> service.createAccount("Gigi", "112233", "2100"));
         assertEquals("Account already exists for holder Gigi", expected.getMessage());
     }
 

@@ -15,11 +15,6 @@
 
     <packaging>jar</packaging>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <!-- slf4j-api is a transitive dependency -->
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
@@ -47,14 +42,14 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
-            <version>3.11.0</version>
+            <version>4.0.0</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.0-M1</version>
+            <version>${jupiter.junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -68,18 +63,11 @@
                     <dependency>
                         <groupId>org.junit.jupiter</groupId>
                         <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.8.0-M1</version>
+                        <version>${jupiter.junit.version}</version>
                     </dependency>
                 </dependencies>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore> <!-- this causes the build to pass, but allows the test failures to be recorded in the report. -->
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <configuration>
-                    <generateReports>true</generateReports>
                 </configuration>
             </plugin>
             <!-- needed to generate the reports during test execution-->
@@ -105,7 +93,4 @@
             </plugin>
         </plugins>
     </build>
-
-
-
 </project>

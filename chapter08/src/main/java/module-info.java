@@ -3,8 +3,6 @@
  */
 module chapter.eight {
     requires jsefa;
-    exports com.apress.bgn.eight;
-    opens com.apress.bgn.eigth.util;
-    opens com.apress.bgn.eigth;
-
+    opens com.apress.bgn.eight.util;
+    opens com.apress.bgn.eight;
 }
