@@ -38,7 +38,7 @@
                     <release>${maven.compiler.release}</release>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
-                    <showDeprecation>true</showDeprecation>  <!-- This enables warnign messages to be shown for deprecated components.-->
+                    <showDeprecation>true</showDeprecation>  <!-- This enables warning messages to be shown for deprecated components.-->
                 </configuration>
                 <executions>
                     <execution>

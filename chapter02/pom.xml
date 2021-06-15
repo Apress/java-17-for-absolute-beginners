@@ -15,6 +15,7 @@
     <description>Contains sources for Chapter 2.</description>
     <packaging>jar</packaging>
 
+
     <build>
         <plugins>
             <plugin>
@@ -34,5 +35,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
