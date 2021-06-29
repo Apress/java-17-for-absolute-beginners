@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>using-swing</artifactId>
-    <name>Chapter 10: AWT and Swing application</name>
+    <name>Chapter 10: Writing an AWT and Swing application</name>
     <description>This is a module of Chapter 10 project showing how to build an AWT and a Swing application.</description>
     <packaging>jar</packaging>
 

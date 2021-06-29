@@ -25,12 +25,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.bgn.eleven;
-
-/**
- * Created by iuliana.cosmina on 05/02/2021
- */
-public class Main {
-    public static void main(String... args) {
-    }
+open module chapter.ten {
+    requires org.apache.tomcat.embed.core;
+    requires java.logging;
 }

@@ -13,8 +13,6 @@
     <name>Chapter 10: Web Application</name>
     <description>This is a module of Chapter 10 project showing how to build a web application.</description>
     <packaging>war</packaging>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
 
     <dependencies>
         <dependency>
@@ -52,7 +50,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>${maven.resources.plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -76,7 +74,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>${maven.war.plugin.version}</version>
                 <configuration>
                     <webXml>${project.basedir}/src/webapp/WEB-INF/web.xml</webXml>
                     <warSourceDirectory>${project.basedir}/src/webapp</warSourceDirectory>
@@ -84,6 +82,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
