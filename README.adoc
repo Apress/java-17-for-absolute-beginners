@@ -6,6 +6,7 @@ This repository accompanies book *Java 17 for Absolute Beginners* (https://link.
 
 image::9781484270806.jpg[Cover image]
 
+
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
 
 === Releases
