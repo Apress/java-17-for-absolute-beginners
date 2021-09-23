@@ -15,7 +15,7 @@ jobs:
     docker:
       - image: openjdk:17
     steps:
-      - init:
+      - run:
           name: Init
           command: |
             echo 'Init Step'
@@ -24,8 +24,8 @@ jobs:
       - checkout
       # Use mvn clean and package as the standard maven build phase
       - run:
-          name: Build
-          command: 'mvn -B -DskipTests clean package'
+          maven/test:
+            command: '-X verify'
 
 workflows:
   # Below is the definition of your workflow.
