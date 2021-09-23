@@ -2,6 +2,9 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+orbs:
+  maven: circleci/maven@1.2.0
+
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   build-and-test:  
@@ -12,16 +15,17 @@ jobs:
     docker:
       - image: openjdk:17
     steps:
+      - init:
+          name: Init
+          command: |
+            echo 'Init Step'
+            echo 'This is the init pipeline step.'
       # Checkout the code as the first step.
       - checkout
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Build
-          command: mvn -B -DskipTests clean package
-      # Then run your tests!
-      - run:
-          name: Test
-          command: mvn test
+          command: 'mvn -B -DskipTests clean package'
 
 workflows:
   # Below is the definition of your workflow.
