@@ -42,3 +42,14 @@ clean install site site:stage
 
 This allows you to build the project and generate the site for it just by running `mvn`, at the root of the project.
 
+==== Building using Docker
+
+If you want to build the project using a Docker container, a Dockerfile is provided to you. Just build the image using the following command (the 5th step is Maven build):
+----
+docker build -t java-17-bgn .
+----
+If you want to inspect the image contents, run the container image using:
+----
+docker run -it --rm --name java-17-bgn-build java-17-bgn
+----
+Use the Docker CLI to log into the instance and run commands.
