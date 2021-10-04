@@ -10,12 +10,12 @@ jobs:
     # Be sure to update the Docker image tag below to openjdk version of your application.
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/openjdk
     docker:
-      - image: amazoncorretto:17
+      - image: openjdk:17-jdk
     steps:
       - run:
           name: Init
           command: |
-            yum install maven -y
+            microdnf install maven
       # Checkout the code as the first step.
       - checkout
       # Use mvn clean and package as the standard maven build phase
