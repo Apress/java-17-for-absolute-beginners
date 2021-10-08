@@ -12,9 +12,8 @@
 
     <artifactId>chapter02</artifactId>
     <name>Chapter 02</name>
-    <description>Contains sources for Chapter 2.</description>
+    <description>Contains sources for Chapter 2. </description>
     <packaging>jar</packaging>
-
 
     <build>
         <plugins>

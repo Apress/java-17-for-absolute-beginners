@@ -37,10 +37,17 @@ mvn clean install -DskipTests
 
 The default Maven goal is set to
 ----
-clean install site site:stage
+clean install site
 ----
 
 This allows you to build the project and generate the site for it just by running `mvn`, at the root of the project.
+
+If you want to generate and run the project site run
+----
+mvn clean install site site:stage site:run -Pdocs
+----
+
+The `docs`maven profile excludes a few modules from generating docs, because of failures caused by non-modular dependencies and plugin incompatibilities.
 
 ==== Building using Docker
 
@@ -50,6 +57,6 @@ docker build -t java-17-bgn .
 ----
 If you want to inspect the image contents, run the container image using:
 ----
-docker run -it --rm --name java-17-bgn-build java-17-bgn
+docker run -it --rm -p 9000:9000 --name java-17-bgn-build java-17-bgn
 ----
 Use the Docker CLI to log into the instance and run commands.

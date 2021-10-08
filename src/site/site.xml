@@ -1,0 +1,51 @@
+<project name="${project.artifactId}">
+
+    <bannerLeft>
+        <name>Java for Absolute Beginners, 2nd edition</name>
+        <src>https://iulianacosmina.com/wp-content/themes/stardust-2.7/images/header.png</src>
+        <href>https://www.apress.com</href>
+    </bannerLeft>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.9</version>
+    </skin>
+
+    <custom>
+        <fluidoSkin>
+            <gitHub>
+                <projectId>iuliana/java-17-for-absolute-beginners</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>black</ribbonColor>
+            </gitHub>
+            <breadcrumbDivider>»</breadcrumbDivider>
+            <topBarEnabled>false</topBarEnabled>
+            <navBarStyle>navbar-inverse</navBarStyle>
+            <sideBarEnabled>true</sideBarEnabled>
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+            <copyrightClass>pull-left</copyrightClass>
+        </fluidoSkin>
+    </custom>
+
+    <body>
+        <links>
+            <item name="Maven" href="http://maven.apache.org"/>
+            <item name="Apache" href="http://www.apache.org"/>
+            <item name="Apress" href="https://www.apress.com"/>
+        </links>
+
+        <menu name="Menu Title">
+            <item name="Contributing" href="${project.basedir}/Contributing.html"/>
+        </menu>
+
+        <menu ref="modules" />
+        <menu ref="reports" />
+        <footer>Copyright (c) 2021 Iuliana Cosmina</footer>
+    </body>
+
+    <poweredBy>
+        <logo name="Iuliana-Cosmina" href="https://iuliana-cosmina.com"
+              img="https://iulianacosmina.com/wp-content/uploads/2021/04/9781484270790-208x300-1.png"/>
+    </poweredBy>
+</project>

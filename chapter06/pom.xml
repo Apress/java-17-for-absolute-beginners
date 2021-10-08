@@ -21,7 +21,6 @@
             <artifactId>chapter04</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>
