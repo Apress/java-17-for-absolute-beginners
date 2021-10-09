@@ -1,3 +1,4 @@
+package com.apress.bgn.five;
 /*
 Freeware License, some rights reserved
 

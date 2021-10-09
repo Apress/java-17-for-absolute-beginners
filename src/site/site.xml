@@ -35,7 +35,6 @@
             <item name="Apress" href="https://www.apress.com"/>
         </links>
 
-        <menu ref="modules" />
         <menu ref="reports" />
 
         <menu name="Additional Info">

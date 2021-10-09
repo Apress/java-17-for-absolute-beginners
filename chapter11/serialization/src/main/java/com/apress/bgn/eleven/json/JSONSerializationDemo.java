@@ -50,7 +50,7 @@ public class JSONSerializationDemo {
 
     public static void main(String... args) {
         LocalDate johnBd = LocalDate.of(1977, Month.OCTOBER, 16);
-        com.apress.bgn.eleven.xml.Singer john = new Singer("John Mayer", 5.0, johnBd);
+        Singer john = new Singer("John Mayer", 5.0, johnBd);
 
         JsonMapper jsonMapper = new JsonMapper();
         jsonMapper.registerModule(new JavaTimeModule());
