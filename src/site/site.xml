@@ -2,7 +2,7 @@
 
     <bannerLeft>
         <name>Java for Absolute Beginners, 2nd edition</name>
-        <src>https://iulianacosmina.com/wp-content/themes/stardust-2.7/images/header.png</src>
+        <src>https://iulianacosmina.com/wp-content/uploads/2021/10/doc-header.png</src>
         <href>https://www.apress.com</href>
     </bannerLeft>
 
@@ -35,17 +35,18 @@
             <item name="Apress" href="https://www.apress.com"/>
         </links>
 
-        <menu name="Menu Title">
-            <item name="Contributing" href="${project.basedir}/Contributing.html"/>
-        </menu>
-
         <menu ref="modules" />
         <menu ref="reports" />
+
+        <menu name="Additional Info">
+            <item name="Contributing" href="Contributing.html"/>
+            <item name="Building" href="README.html"/>
+            <item name="Errata" href="Errata.html"/>
+        </menu>
         <footer>Copyright (c) 2021 Iuliana Cosmina</footer>
     </body>
 
     <poweredBy>
-        <logo name="Iuliana-Cosmina" href="https://iuliana-cosmina.com"
-              img="https://iulianacosmina.com/wp-content/uploads/2021/04/9781484270790-208x300-1.png"/>
+        <logo name="Iuliana-Cosmina" href="https://iuliana-cosmina.com"/>
     </poweredBy>
 </project>

@@ -12,7 +12,7 @@ Download the files as a zip using the green button, or clone the repository to y
 === Releases
 
 *Release v2.0* corresponds to the code in the second edition of the published book, without corrections or updates.
-This project was built successfully with JDK versions 17-ea and Maven version 3.8.2
+This project was built successfully with JDK versions 17 and Maven version 3.8.2.
 The syntax is specific to Java versions up to and including 17. (Unstable(preview) features have not been covered in the book)
 
 === Corrections
@@ -35,7 +35,7 @@ Build it without tests using:
 mvn clean install -DskipTests
 ----
 
-The default Maven goal is set to
+The default Maven goal is set to:
 ----
 clean install site
 ----
@@ -47,7 +47,9 @@ If you want to generate and run the project site run
 mvn clean install site site:stage site:run -Pdocs
 ----
 
-The `docs`maven profile excludes a few modules from generating docs, because of failures caused by non-modular dependencies and plugin incompatibilities.
+This project does not require installing Apache Maven, because it was configured to be run with an Apache Maven Wrapper. All previous commands can be  run with `./mvnw` instead of `mvn`.
+
+The `docs` maven profile excludes a few modules from generating docs, because of failures caused by non-modular dependencies and plugin incompatibilities.
 
 ==== Building using Docker
 
@@ -57,6 +59,9 @@ docker build -t java-17-bgn .
 ----
 If you want to inspect the image contents, run the container image using:
 ----
-docker run -it --rm -p 9000:9000 --name java-17-bgn-build java-17-bgn
+docker run -it -p 9000:9000 --name java-17-bgn-build -v ${PWD}:/usr/src/java-17-for-absolute-beginners java-17-bgn
 ----
+
 Use the Docker CLI to log into the instance and run commands.
+
+Or if you are using a Linux/Unix system just execute the `build-and-serve.sh` provided with this project and the Docker image will be built, a container will be started and used to build the project and serve the docs at http://localhost:9000/. It might take a while, but it gets the job done.
