@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>chapter11</artifactId>
+        <groupId>com.apress.bgn</groupId>
+        <version>2.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>media-handling</artifactId>
+    <name>Chapter 11: Reading and Writing Images</name>
+    <description>This is a module of Chapter 11 project showing how to read and write images using the Java API.</description>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>javafx</groupId>
+            <artifactId>com.javafx.base</artifactId>
+            <version>17</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/javafx.base.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>javafx</groupId>
+            <artifactId>com.javafx.controls</artifactId>
+            <version>17</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/javafx.controls.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>javafx</groupId>
+            <artifactId>com.javafx.graphics</artifactId>
+            <version>17</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/javafx.graphics.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>libs/</classpathPrefix>
+                            <mainClass>
+                                com.apress.bgn.eleven.JavaFxMediaDemo
+                            </mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

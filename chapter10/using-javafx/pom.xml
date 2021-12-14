@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java-17-for-absolute-beginners</artifactId>
+        <groupId>com.apress.bgn</groupId>
+        <version>2.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>using-javafx</artifactId>
+    <name>Chapter 10: JavaFX application</name>
+    <description>This is a module of Chapter 10 project showing how to build a JavaFx application.</description>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>javafx</groupId>
+            <artifactId>com.javafx.base</artifactId>
+            <version>17</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/javafx.base.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>javafx</groupId>
+            <artifactId>com.javafx.controls</artifactId>
+            <version>17</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/javafx.controls.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>javafx</groupId>
+            <artifactId>com.javafx.graphics</artifactId>
+            <version>17</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/javafx.graphics.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>libs/</classpathPrefix>
+                            <mainClass>
+                                com.apress.bgn.ten.ReadingUsingConsoleDemo
+                            </mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

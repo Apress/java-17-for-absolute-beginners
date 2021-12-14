@@ -1,0 +1,39 @@
+== Apress Source Code
+
+***
+
+This repository accompanies book *Java for Absolute Beginners* (https://www.apress.com/in/book/9781484237779) by Iuliana Cosmina(Apress, 2018).
+
+image::java-17-for-beginners.png[Cover image]
+
+Download the files as a zip using the green button, or clone the repository to your machine using Git.
+
+=== Releases
+
+*Release v2.0* corresponds to the code in the second edition of the published book, without corrections or updates.
+This project was built successfully with JDK versions 17-ea and Maven version 3.8.2
+The syntax is specific to Java versions up to and including 17. (Unstable(preview) features have not been covered in the book)
+
+=== Corrections
+For corrections to the content in the published book, see the file link:Errata.adoc[Errata.adoc].
+
+=== Contributions
+See the file link:Contributing.adoc[Contributing.adoc] for more information on how you can contribute to this repository.
+
+=== Building and Deploying
+This is a Maven multi-module project. Build it from scratch using:
+----
+mvn clean install
+----
+
+Build it without tests using:
+----
+mvn clean install -DskipTests
+----
+
+The default Maven goal is set to
+----
+clean install site site:stage
+----
+
+This allows you to build the project and generate the site for it just by running `mvn`, at the root of the project.

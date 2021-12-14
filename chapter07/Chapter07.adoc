@@ -1,0 +1,17 @@
+== Chapter 7 extra info
+
+To install Docker read instructions on the Docker official site: https://docs.docker.com/get-docker/
+
+To test the database connection examples use this docket container: https://hub.docker.com/_/mysql
+
+Example of command to start it locally:
+
+[source,shell]
+----
+# using root user
+docker run -d -p 3306:3306 -P --name local-mysql -e MYSQL_ROOT_PASSWORD=mypass -d mysql:latest
+
+
+# using sample user and sample schema
+docker run -d -p 3306:3306 -P --name local-mysql -d mysql:latest -e MYSQL_ROOT_PASSWORD=mypass MYSQL_USER=sample MYSQL_PASSWORD=sample MYSQL_DATABASE=sample
+----
