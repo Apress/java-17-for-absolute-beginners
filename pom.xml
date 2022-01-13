@@ -62,7 +62,7 @@
             </modules>
         </profile>
         <profile>
-            <!-- This profile was introduced to only include module that a site can be generated for. -->
+            <!-- This profile was introduced to only include modules that a site can be generated for. -->
             <id>docs</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
@@ -278,7 +278,7 @@
     <distributionManagement>
         <site>
             <id>${project.artifactId}</id>
-            <url>https://www.apress.com/gp/book/9781484270790</url>
+            <url>https://link.springer.com/book/10.1007/978-1-4842-7080-6</url>
         </site>
     </distributionManagement>
 

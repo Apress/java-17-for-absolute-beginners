@@ -64,8 +64,8 @@ public class PatternMatchingDemo {
     }
 
     /*
-    Pattern Matching for switch (Preview)
-    https://openjdk.java.net/jeps/406
+    Pattern Matching for switch (Preview), commented because this breaks the build currently https://openjdk.java.net/jeps/406
+    // Will be available in JDK 18
     private static String newStyleFormat(Object item) {
         return switch (item) {
             case String str -> String.format("String %s", str);
