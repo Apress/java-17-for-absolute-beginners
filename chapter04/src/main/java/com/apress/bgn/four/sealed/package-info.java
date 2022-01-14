@@ -25,52 +25,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.bgn.four.hierarchy;
+package com.apress.bgn.four.sealed;
 
-import java.util.List;
-
-/**
- * Created by iuliana.cosmina on 24/03/2021
- */
-public class MiliVanili implements Musician { // Musician extends Artist
-
-    @Override
-    public boolean isCreative() {
-        return false;
-    }
-
-    public MiliVanili() {
-    }
-
-    @Override
-    public String getSchool() {
-        return null;
-    }
-
-    @Override
-    public void setSchool(String school) {
-
-    }
-
-
-
-    @Override
-    public List<String> getSongs() {
-        return null;
-    }
-
-    @Override
-    public void setSongs(List<String> songs) {
-
-    }
-
-    @Override
-    public String getGenre() {
-        return null;
-    }
-
-    @Override
-    public void setGenre(String genre) {
-
-    }
-}
+// The classes were commented because using JDK 17 EAP they break the build.

@@ -6,7 +6,7 @@ package com.apress.bgn.four.hierarchy;
  * @since 1.0
  */
 public interface Artist {
-    int LIFESPAN = 100;
+    public static final int LIFESPAN = 100;
 
     String getSchool();
 
@@ -21,7 +21,7 @@ public interface Artist {
         System.out.println("A true artist has a creative nature.");
     }
 
-    static String capitalize(final String name){
+    public static String capitalize(final String name){
         Character c = name.charAt(0);
         if(Character.isLowerCase(c)) {
             Character upperC = Character.toUpperCase(c);

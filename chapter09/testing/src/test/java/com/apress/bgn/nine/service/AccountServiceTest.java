@@ -25,7 +25,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-
 package com.apress.bgn.nine.service;
 
 import com.apress.bgn.nine.Account;
@@ -34,8 +33,6 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Iuliana Cosmina

@@ -14,6 +14,7 @@
     <description>Contains code samples showing process monitorization and manipulation.</description>
     <packaging>jar</packaging>
 
+
     <dependencies>
         <!-- slf4j-api is a transitive dependency -->
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->

@@ -2,10 +2,9 @@
 
 ***
 
-This repository accompanies book *Java 17 for Absolute Beginners* (https://link.springer.com/book/10.1007/978-1-4842-7080-6) by Iuliana Cosmina(Apress, 2022).
+This repository accompanies book *Java for Absolute Beginners* (https://www.apress.com/in/book/9781484237779) by Iuliana Cosmina(Apress, 2018).
 
-image::9781484270806.jpg[Cover image]
-
+image::java-17-for-beginners.png[Cover image]
 
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
 
@@ -61,7 +60,5 @@ If you want to inspect the image contents, run the container image using:
 ----
 docker run -it -p 9000:9000 --name java-17-bgn-build -v ${PWD}:/usr/src/java-17-for-absolute-beginners java-17-bgn
 ----
-
-Use the Docker CLI to log into the instance and run commands.
 
 Or if you are using a Linux/Unix system just execute the `build-and-serve.sh` provided with this project and the Docker image will be built, a container will be started and used to build the project and serve the docs at http://localhost:9000/. It might take a while, but it gets the job done.

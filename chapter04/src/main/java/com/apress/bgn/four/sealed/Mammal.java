@@ -31,4 +31,3 @@ package com.apress.bgn.four.sealed;
 public sealed interface Mammal permits Human {
 
 }
-

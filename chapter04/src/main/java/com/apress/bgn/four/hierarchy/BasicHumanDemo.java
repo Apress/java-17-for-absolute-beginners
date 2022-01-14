@@ -23,6 +23,7 @@ public class BasicHumanDemo {
         for (Gender value : Gender.values()) {
             System.out.println(value.getClass());
         }
+
     }
 
 }

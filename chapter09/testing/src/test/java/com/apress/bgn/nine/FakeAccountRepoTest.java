@@ -27,7 +27,6 @@ SOFTWARE.
 */
 package com.apress.bgn.nine;
 
-import com.apress.bgn.nine.Account;
 import com.apress.bgn.nine.db.DbConnection;
 import com.apress.bgn.nine.fake.db.FakeDBConnection;
 import com.apress.bgn.nine.repo.AccountRepo;

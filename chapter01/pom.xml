@@ -35,11 +35,11 @@
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
                                 com.apress.bgn.one.Example01
-                                <!-- com.apress.bgn.one.HelloWorld -->
+                               <!-- com.apress.bgn.one.HelloWorld -->
                             </mainClass>
                         </manifest>
                     </archive>
-                 </configuration>
+                </configuration>
             </plugin>
         </plugins>
     </build>
