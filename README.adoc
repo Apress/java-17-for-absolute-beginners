@@ -2,7 +2,7 @@
 
 ***
 
-This repository accompanies book *Java for Absolute Beginners* (https://www.apress.com/in/book/9781484237779) by Iuliana Cosmina(Apress, 2018).
+This repository accompanies book *Java for Absolute Beginners* (https://link.springer.com/book/10.1007/978-1-4842-7080-6) by Iuliana Cosmina(Apress, 2018).
 
 image::java-17-for-beginners.png[Cover image]
 
