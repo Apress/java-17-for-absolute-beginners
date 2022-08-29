@@ -2,3 +2,26 @@
 
 === Introduction
 Hi guys, I am really thankful to all of you that have bought the book and have contributed to finding mistakes in it and in the code, and asking questions about details that seem unclear.
+
+
+=== Chapter 4: Java Syntax
+
+'''
+
+On **page 183**, last paragraph on the page:
+
+The paragraph describes the functionality of a *try-catch-finally* block. The whole paragraph got scrambled, probably by me being half-asleep while writing it and it is pretty confuse and incorrect.
+
+Original paragraph:
+
+And since we are talking about exceptions, the *try/catch* block can be completed with a *finally* block. The contents of the *finally* block are executed if the exception does not match any of the types declared in the catch block (more than one type can be declared in a catch block, and it will be discussed later in the book), and is thrown further, or if the method returns normally. +
+The only situation in which the *finally* block is not executed is when the program ends in an error.
+
+
+Should be replaced with:
+
+And since we are talking about exceptions, the *try/catch* block can be completed with a *finally* block. The contents of the *finally* block are almost always executed. If the exception does not match any of the types declared in the catch block (more than one type can be declared in a catch block, and it will be discussed later in the book), the exception is thrown further, but the finally block is still executed. +
+If the method returns normally, no exception is thrown, the *finally* block is executed. +
+The only situation in which the *finally* block is not executed is when the program ends in an error.
+
+'''
